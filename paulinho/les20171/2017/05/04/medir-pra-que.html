@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Posts</title>
-  <meta name="description" content="Este é apenas mais um blog na internet, portanto não dê muita importância para ele.">
+  <title>Medir? Pra que?</title>
+  <meta name="description" content="A experiência em tentar medir a qualidade do software que está sendo desenvolvido está sendo bem frustrante.">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/posts/">
+  <link rel="canonical" href="http://localhost:4000/paulinho/les20171/2017/05/04/medir-pra-que.html">
   <link rel="alternate" type="application/rss+xml" title="Adler Neves" href="/feed.xml">
   
   
@@ -60,44 +60,32 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Medir? Pra que?</h1>
+    <p class="post-meta"><time datetime="2017-05-04T10:46:25-03:00" itemprop="datePublished">May 4, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>A experiência em tentar medir a qualidade do software que está sendo desenvolvido está sendo bem frustrante.</p>
+
+<p>Confiando nos resultados do SonarQube com o plugin TsLint gerados localmente, permanecemos desenvolvendo tranquilamente sem atentarmo-nos se as métricas realmente estavam sendo calculadas.</p>
+
+<p>Após uma breve desconfiança dos resultados apresentados pelo Sonar ao identificar manualmente duplicidade de código cujo tamanho é maior que 50 tokens, e observar que esta não foi detectada; percebemos também que as outras métricas também não estavam sendo contabilizadas. A única métrica que funcionou foi (parcialmente) já era obtida a partir do compilador do TypeScript.</p>
+
+<p>Além disso, observou-se que ao utilizar classes que usam implementações nativas, o código deixa de funcionar de funcionar em browsers desktop. As ferramentas de teste automatizado de código ou usam o console do NodeJS, ou um browser desktop para executar. Isso implica que em ambos os casos, não é possível testar nenhum caso de teste se um banco de dados relacional persistente for utilizado.</p>
+
+<p>Outra frustração foi uma atualização do framework ionic que impôs uma perda de trabalho pronto ao projeto, sendo necessário retrabalho. Isso atrasou em uma semana a constatação de que testar com as ferramentas escolhidas não será possível.</p>
+
+<p>A idéia inicial era utilizar gráficos X-bar e R sobre o GQM do projeto, medido ao final de cada uma das 10 sprints do projeto. Devido à influência negativa das tarefas de outras disciplinas sobre o tempo disponível para desenvolver o projeto, as várias métricas do GQM foram consideradas a ser atreladas à única métrica: pontos cumpridos por sprint; entretanto seria um gráfico sem propósito, pois o gráfico de burndown já supre tal necessidade.</p>
+
+<p>Medir? Sim! Pra quê? Para saber se algo está indo mal, e onde está indo mal. E sabemos que estamos atrasados em nosso cronograma, infelizmente.</p>
+
+  </div>
+
   
-  
-
-
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">May 4, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/paulinho/les20171/2017/05/04/medir-pra-que.html">Medir? Pra que?</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 30, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/paulinho/les20171/2017/04/30/quem-faz-malfeito-faz-duas-vezes.html">&quot;Quem faz malfeito faz duas vezes&quot;? Ou três? Ou quatro? Quantas?</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 23, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/paulinho/les20171/2017/03/23/primeiros-contatos-com-bdd-e-tdd.html">Primeiros contatos com BDD e TDD</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
-</div>
+</article>
 
       </div>
     </main>
