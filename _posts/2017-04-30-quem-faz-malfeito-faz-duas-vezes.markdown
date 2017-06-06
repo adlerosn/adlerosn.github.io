@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "\"Quem faz malfeito faz duas vezes\"? Ou três? Ou quatro? Quantas?"
+date:   2017-04-30 12:41:25 -0300
+categories: paulinho les20171
+---
+
+Inspirado [num artigo escrito no Medium](https://medium.com/desenvolvimento-%C3%A1gil/a-nova-metodologia-69b8f8a379c7), este post falará o óbvio que "todos" sabem (ou deveriam) e até é ditado popular, mas ignoram mesmo assim: "quem faz malfeito faz duas vezes".
+
+O desenvolvimento de um software visa resolver um problema, que tem suas peculiaridades. Nada pior que uma "estimativa otimista demais" para começar o desenvolvimento dum software. Metodologias tradicionais geralmente possuem um caráter prescritivo, algo que é fácil de escrever num contrato, mas que não dá flexibilidade à equipe de desenvolvimento ou ao contratante em alterar requisitos. Metodologias ágeis vieram para fornecer princípios que flexibilizam o projeto de desenvolvimento do software, tornando-o mais reativo e menos preditivo.
+
+De acordo com o Project Smart, apenas [16%](https://www.projectsmart.co.uk/the-curious-case-of-the-chaos-report-2009.php) dos projetos de software obtiveram sucesso em 1994 e em 2012 tal taxa era [39%](https://www.projectsmart.co.uk/cutting-through-the-chaos.php). Sem dúvida o cenário melhorou muito, onde neste intervalo a linguagem de programação Java foi introduzida no mercado em 1995, o Extreme Programming foi primeiramente apresentado em 1999, o UML foi aceito pela ISO em 2000, o Manifesto para Desenvolvimento Ágil de Software foi publicado em 2001, o PHP ganhou suporte "completo" a orientação a objetos (é o que diz a [documentação](http://php.net/manual/pt_BR/oop5.intro.php)) em 2004, o SonarQube for lançado em 2007, o NodeJS foi lançado em 2009, dentre vários outros acontecimentos no mundo de desenvolvimento de software. Entretanto, 4 em 10 ainda é uma taxa de sucesso baixa, restando espaço para melhorias; mas nem todo fracasso é culpa da metodologia.
+
+Observando práticas de codificação em plataformas de fórum open-source e closed-source notei que decisões de projeto equivocadas que comprometem a extensibilidade da plataforma levam à completa reescrita da solução quando a adição dum recurso torna-se imprescindível ou sua manutenção torna-se custosa.
+
+Considerando como erro de projeto toda decisão que limita o software mas mesmo assim é escolhida pois é o caminho de menor esforço, um exemplo a não ser seguido é a plataforma (paga) de fóruns XenForo, que em sua versão 1.x.x (2010 em diante) não possuía classes de aplicação (componente de gerência de tarefas) e mantinha a maior parte de suas regras de negócio nos controladores do padrão MVC (que vincula a URL à classe e seu método), o que forçava duplicação de código e dificultava e às vezes até impedia a criação de microserviços. Na versão 2.x.x (2016 em diante), sob o pretexto de um código mais conciso, coerente e limpo, reimplementaram tudo do zero.
+
+Na nova versão, alguns os erros de projeto que dificultavam a manutenção do código-base foram corrigidos, mantendo uns e até introduzindo outros: a documentação ainda é inexistente, ainda não existe componente de gerência de tarefas (lógica de negócio permanece no controlador) e utilizaram padrões de projeto marcados como obsoleto pela própria documentação da linguagem. Como consequência da reescrita, a compatibilidade de mais de 3500 extensões escritas para a plataforma foi quebrada; razões contratuais obrigam alguns desenvolvedores que venderam suas extensões a reescrevê-las para a nova versão sem custo adicional para seus consumidores - mas aqueles extensões disponibilizadas sem custo algum poderão terminar abandonadas.
+
+Não basta a equipe ser flexível: a solução também tem de ser. Uma documentação bem escrita é importante pois define de maneira acessível os locais onde a solução pode ou não ser estendida. Mudanças e acréscimo de requisitos vão acontecer, pois leis, processos e até a vontade do product owner que definem o comportamento do software mudam; seja durante seu desenvolvimento ou sua manutenção (a menos que o projeto seja abandonado).
+
+Portanto, acredito que a próxima revolução na Engenharia de Software não virá de uma nova metodologia, mas sim do abandono de velhos vícios de codificação por parte dos programadores. Até lá, podem reescrever o código quantas vezes for necessário: sem previamente desconstruir as más práticas e reconstruir boas práticas no lugar, nada muda. É necessário destruir para construir.
