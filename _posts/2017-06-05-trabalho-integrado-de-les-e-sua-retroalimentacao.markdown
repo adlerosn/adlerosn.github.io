@@ -29,7 +29,7 @@ Em uma semana de refatoração, consegui deixar 1 dos 6 métodos da classe de DA
 
 A Framework Ionic foi projetada negligenciando testes unitários; consequência disso foi que gastei horas pesquisando como realizá-los. Encontrar um tutorial não foi difícil, mas sim fazê-los funcionar; quando terminei, observei que nenhuma classe de backend não era testável. O backend tinha de ser trocado, mas guardei isso para mim pois mais uma entrega estava à vista e a documentação necessitava de minha atenção.
 
-Entrega feita, me vi no dilema: ou usamos o que aprendemos ao longo das *sprints*, ou continuaremos enrolados (e reprovação iminente). Mudar não era opção: era o caminho mais promissor.
+Entrega feita, me vi no dilema: ou usamos o que aprendemos ao longo das *sprints*, ou continuaremos enrolados (e reprovação iminente). Mudar não era opção.
 
 Após entregue e descansado (ok, menos exausto), simplesmente avisei: "vou trocar o backend e parte do código terá de ser reescrita". Tentei usar a framework TypeORM enquanto tentava salvar uma mínima parte do já tinha sido escrito: só sobrou a tela de início. **Apaguei sem dó**. Refiz a modelagem de dados, pois a anterior não usava *clean code* e estava confusa: primeiro um UML rascunhado numa folha de caderno que depois virou código.
 
@@ -43,4 +43,8 @@ Após entregue e descansado (ok, menos exausto), simplesmente avisei: "vou troca
 
 E finalmente o código estava no mesmo ponto que antes, porém testável e duma forma que as telas dependiam de abstrações: era apenas implementar alguns poucos métodos abstratos.
 
-Ao término da terceira semana (domingo à noite), restavam apenas dois requisitos funcionais, então Yago fez o requisito funcional de compartilhamento em redes sociais e eu fiz os gráficos de histórico de preços; na terça-feira à noite, compilei e submeti o APK na release `0.0.1-beta3`.
+Ao término da terceira semana (domingo à noite), restavam apenas dois requisitos funcionais, então Yago fez o requisito funcional de compartilhamento em redes sociais e eu fiz os gráficos de histórico de preços; na terça-feira à noite, compilei e submeti o APK na release `0.0.1-beta3`. Restava o diário de bordo e a documentação.
+
+Na quinta-feira terminei a redação dos rascunhos do diário de bordo e submeti o *commit* no repositório. De maneira muito mais relaxada que nas últimas duas entregas, havia pouco o que atualizar ou adicionar, visto que muito ficou distribuído durante o mês. Agora, sim, acho que o projeto está em dia.
+
+Como percebido, o desenvolvimento do projeto foi uma grande procrastinação até a segunda entrega ser submetida, onde o aprendizado feito até então o momento da decisão serviu para entregar, neste terceiro *milestone*, um projeto em dia e com condições reais de finalizar no prazo com todos os requisitos levantados.
